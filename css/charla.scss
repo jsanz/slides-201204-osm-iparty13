@@ -1,0 +1,211 @@
+/*
+Hoja para la charla de OSM de Castellón 2012
+
+Cambios
+- 6/4/12 jsanz
+*/ 
+
+/* Paleta de colores a usar por defecto */
+@import "_variables";
+
+/* colores y fuentes sobrecargados 
+  $cPrimario:   #755671;
+  $cSecundario: #615675;
+  
+  $cFondo1: #CCFFBB;
+  $cFondo2: #ADD99F; 
+  $cFondo3: #A1C993; 
+  $cQuotes: #2B2B2B;
+  
+  @import url("http://fonts.googleapis.com/css?family=Imprima&subset=latin,latin-ext");
+  @import url("http://fonts.googleapis.com/css?family=Inconsolata");
+  
+  $f_principal: 'Imprima', georgia, sans-serif;
+  $f_condensada: Inconsolata, courier; */
+
+/* Colores y fuentes para charla AVT */
+
+/* paleta de kuler - triads - basada en el color base de prode*/
+
+$cIz2: #780c18; // granate
+$cIz1: #1281b7; // azul claro
+$cBase: #00486b; // prode
+$cDe1: #383606; // verde oscuro
+$cDe2: #b7b109;  // verde claro
+
+$cPrimario: $cBase;
+$cSecundario: $cIz2;
+
+$cFondo: $cDe2;// $cIz1;
+$cFondo1: lighten($cFondo,80%); /*fondo*/
+$cFondo2: lighten($cFondo,40%); /*exterior*/
+$cFondo3: lighten($cFondo,60%); /*interior*/
+
+$cQuotes: $cDe1;
+
+@import url("http://fonts.googleapis.com/css?family=Imprima&subset=latin,latin-ext");
+@import url("http://fonts.googleapis.com/css?family=Inconsolata");
+
+$f_principal: 'Imprima', verdana, sans-serif;
+$f_condensada: Inconsolata, courier;
+
+
+/* 
+   Plantilla base con todo lo necesario 
+   para una presentación básica
+ */
+@import "_plantilla"; 
+
+.hint{bottom: 60px;}
+
+/** BANNER PARA ESTE SARAO **/
+.banner{
+	background-image: url(banner.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	/* los tamaños son los de la imagen */
+	width: 193px;
+  height: 50px;
+}
+
+/* estilos básicos */
+a { background:lighten($cIz2,60%);}
+
+img {z-index:1000;}
+
+/* portada */
+#title {
+  padding: 0;
+  background-image: url('../imgs/osm-logo-mini.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+	
+	/*fuentes de la portada*/
+	h1{
+		font-size: 100px;
+		margin-bottom:50px;
+	}
+	h2{
+		font-size: 50px;
+		text-align: center;
+		margin-bottom: 50px
+	}
+	.yo{font-size:28px;margin-bottom:90px;}
+	
+}
+
+
+/*renders*/
+
+#render3 a, #render4 a, #datos7 p a{
+		text-decoration: none;
+		border: 0 none;
+    padding: 0;
+    background: none;
+    text-shadow: none;
+    border-radius: 0;
+}
+
+
+#render3 img, #render4 img{
+	width: 300px;
+	margin: 0px;
+	border: 1px solid black;
+	padding: 10px;
+	background: white;
+}
+
+#render3 img:hover, #render4 img:hover{
+		z-index: 100;
+		-webkit-transition: all 1s ease;
+		-moz-transition:    all 1s ease;	 
+		-ms-transition:     all 1s ease;	 
+		-o-transition:      all 1s ease;	 
+		transition:         all 1s ease;	 
+}
+
+#render3 img[src*="standard"]:hover,#render4 img[src*="freeline"]:hover{
+		-webkit-transform: scale(2.1) translateX(80px) translateY(68px);
+		-moz-transform:    scale(2.1) translateX(80px) translateY(68px);
+		-ms-transform:     scale(2.1) translateX(80px) translateY(68px);
+		-o-transform:      scale(2.1) translateX(80px) translateY(68px);
+		transform:         scale(2.1) translateX(80px) translateY(68px);
+}
+#render3 img[src*="cycle"]:hover,#render4 img[src*="midnight"]:hover{
+		-webkit-transform: scale(2.1) translateX(-80px) translateY(68px);
+		-moz-transform:    scale(2.1) translateX(-80px) translateY(68px);
+		-ms-transform:     scale(2.1) translateX(-80px) translateY(68px);
+		-o-transform:      scale(2.1) translateX(-80px) translateY(68px);
+		transform:         scale(2.1) translateX(-80px) translateY(68px);
+}
+#render3 img[src*="transport"]:hover,#render4 img[src*="pale"]:hover{
+		-webkit-transform: scale(2.1) translateX(80px) translateY(-68px);
+		-moz-transform:    scale(2.1) translateX(80px) translateY(-68px);
+		-ms-transform:     scale(2.1) translateX(80px) translateY(-68px);
+		-o-transform:      scale(2.1) translateX(80px) translateY(-68px);
+		transform:         scale(2.1) translateX(80px) translateY(-68px);
+}
+#render3 img[src*="mapquest"]:hover,#render4 img[src*="city"]:hover{
+		-webkit-transform: scale(2.1) translateX(-80px) translateY(-68px);
+		-moz-transform:    scale(2.1) translateX(-80px) translateY(-68px);
+		-ms-transform:     scale(2.1) translateX(-80px) translateY(-68px);
+		-o-transform:      scale(2.1) translateX(-80px) translateY(-68px);
+		transform:         scale(2.1) translateX(-80px) translateY(-68px);
+}
+
+/* api */
+
+.api p{
+	font-size: 32px;
+}
+
+#api7 li{
+	font-family: Iconsoledata,courier;
+}
+
+/* josm */
+#josm img{
+			float:right;
+			width: 60px;
+			margin-top: 150px;
+			margin-right: 50px;
+}
+#josm.active img{
+
+	-webkit-transform: scale(3);
+	-moz-transform:    scale(3);
+	-ms-transform:     scale(3);
+	-o-transform:      scale(3);
+	transform:         scale(3);
+	
+	-webkit-transition-duration: 2.0s;
+	-moz-transition-duration:    2.0s;
+	-ms-transition-duration:     2.0s;
+	-o-transition-duration:      2.0s;
+	transition-duration:         2.0s;
+	
+	-webkit-transition-delay: 2.0s;
+	-moz-transition-delay:    2.0s;
+	-ms-transition-delay:     2.0s;
+	-o-transition-delay:      2.0s;
+	transition-delay:         2.0s;
+}
+
+
+
+/* mientras hago la diapo dejo este
+ estilo para ver dónde queda cada cosa
+ en el overview, luego puedo quitarlo
+ y solo saldrán las diapos con clase "section"
+ */
+.impress-on-overview{ 
+	/* ocultar todo por defecto */
+	.step {
+    opacity: 0.6;
+    cursor: pointer;
+	}
+}
+
+#overview.active p{
+	margin: 420px 0 0 250px;
+}
