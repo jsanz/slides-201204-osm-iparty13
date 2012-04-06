@@ -35,7 +35,7 @@ Cambios:
   $f_principal: 'Imprima', georgia, sans-serif;
   $f_condensada: Inconsolata, courier; */
 /* Colores y fuentes para charla AVT */
-/* paleta de kuler - triads - basada en el color base de prode*/
+/* paleta de kuler - triads - basada en el color base de OSM*/
 /*fondo*/
 /*exterior*/
 /*interior*/
@@ -120,13 +120,13 @@ body {
   font-family: "Imprima", verdana, sans-serif;
   /** Tamaño **/
   min-height: 740px;
-  background: #fefef4;
-  background-color: #faf692;
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(white), to(#faf692));
-  background-image: -webkit-radial-gradient(white, #faf692);
-  background-image: -moz-radial-gradient(white, #faf692);
-  background-image: -o-radial-gradient(white, #faf692);
-  background-image: radial-gradient(white, #faf692);
+  background: white;
+  background-color: #dccac3;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(white), to(#dccac3));
+  background-image: -webkit-radial-gradient(white, #dccac3);
+  background-image: -moz-radial-gradient(white, #dccac3);
+  background-image: -o-radial-gradient(white, #dccac3);
+  background-image: radial-gradient(white, #dccac3);
   -webkit-font-smoothing: antialiased; }
 
 /* enable clicking on elements 'hiding' behind body in 3D */
@@ -159,10 +159,10 @@ body {
     margin-bottom: 20px;
     line-height: 1.1; }
   .step h1 {
-    color: #00486b;
+    color: #5b8547;
     font-size: 85px; }
   .step h2 {
-    color: #780c18;
+    color: #855e4e;
     font-size: 60px; }
 
 /* IMÁGENES */
@@ -231,7 +231,7 @@ a {
   font-weight: normal; }
 
 blockquote {
-  color: #383606;
+  color: #9f6b55;
   margin: 1em 20px;
   padding-left: 60px;
   background: transparent url(quote.png) no-repeat;
@@ -305,7 +305,7 @@ ul.discs {
 
 /* TRANSICIÓN DEL STRONG A UN COLOR AL ACTIVAR DIAPO */
 .active strong {
-  color: #00486b;
+  color: #5b8547;
   -webkit-transition-property: color;
   -moz-transition-property: color;
   -ms-transition-property: color;
@@ -443,11 +443,11 @@ ul.discs {
   .slide ul {
     margin-top: 10px; }
   .slide a {
-    color: #00486b;
+    color: #5b8547;
     background: none;
     text-shadow: none; }
   .slide h2 {
-    color: #780c18;
+    color: #855e4e;
     line-height: 1.5; }
   .slide li {
     margin-bottom: 15px; }
@@ -498,7 +498,7 @@ ul.discs {
 
 /* estilos básicos */
 a {
-  background: #f8bec4; }
+  background: #aaca9b; }
 
 img {
   z-index: 1000; }

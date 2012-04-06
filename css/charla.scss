@@ -25,16 +25,16 @@ Cambios
 
 /* Colores y fuentes para charla AVT */
 
-/* paleta de kuler - triads - basada en el color base de prode*/
+/* paleta de kuler - triads - basada en el color base de OSM*/
 
-$cIz2: #780c18; // granate
-$cIz1: #1281b7; // azul claro
-$cBase: #00486b; // prode
-$cDe1: #383606; // verde oscuro
-$cDe2: #b7b109;  // verde claro
+$cIz2: #9FA3D9; // violeta claro
+$cIz1: #5B8547; // verde oscuro
+$cBase: #9ED285; // OSM
+$cDe1: #9F6B55; // rosa claro
+$cDe2: #855E4E;  // rosa oscuro
 
-$cPrimario: $cBase;
-$cSecundario: $cIz2;
+$cPrimario: $cIz1;
+$cSecundario: $cDe2;
 
 $cFondo: $cDe2;// $cIz1;
 $cFondo1: lighten($cFondo,80%); /*fondo*/
@@ -69,7 +69,7 @@ $f_condensada: Inconsolata, courier;
 }
 
 /* estilos básicos */
-a { background:lighten($cIz2,60%);}
+a { background:lighten($cIz1,30%);}
 
 img {z-index:1000;}
 
