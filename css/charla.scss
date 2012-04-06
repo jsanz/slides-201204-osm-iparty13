@@ -32,21 +32,26 @@ $cIz1: #5B8547; // verde oscuro
 $cBase: #9ED285; // OSM
 $cDe1: #9F6B55; // rosa claro
 $cDe2: #855E4E;  // rosa oscuro
+$cAzul: #BFD8EC;
 
 $cPrimario: $cIz1;
-$cSecundario: $cDe2;
+$cSecundario: darken($cAzul,50%);
 
-$cFondo: $cDe2;// $cIz1;
-$cFondo1: lighten($cFondo,80%); /*fondo*/
+
+
+$cFondo: $cDe1;// $cIz1;
+$cFondo1: lighten($cFondo,60%); /*fondo*/
 $cFondo2: lighten($cFondo,40%); /*exterior*/
 $cFondo3: lighten($cFondo,60%); /*interior*/
 
 $cQuotes: $cDe1;
 
-@import url("http://fonts.googleapis.com/css?family=Imprima&subset=latin,latin-ext");
+/*@import url("http://fonts.googleapis.com/css?family=Imprima&subset=latin,latin-ext");*/
 @import url("http://fonts.googleapis.com/css?family=Inconsolata");
 
-$f_principal: 'Imprima', verdana, sans-serif;
+@import url("http://fonts.googleapis.com/css?family=Exo:500,800,500italic,800italic&subset=latin,latin-ext");
+
+$f_principal: 'Exo', verdana, sans-serif;
 $f_condensada: Inconsolata, courier;
 
 
@@ -58,6 +63,7 @@ $f_condensada: Inconsolata, courier;
 
 .hint{bottom: 60px;}
 
+
 /** BANNER PARA ESTE SARAO **/
 .banner{
 	background-image: url(banner.png);
@@ -68,7 +74,10 @@ $f_condensada: Inconsolata, courier;
   height: 50px;
 }
 
+
 /* estilos básicos */
+
+
 a { background:lighten($cIz1,30%);}
 
 img {z-index:1000;}
@@ -95,6 +104,43 @@ img {z-index:1000;}
 }
 
 
+
+/* definitions */
+#def2 { font-size: 60px;}
+
+.comp img{ max-width: 900px; height: auto;}
+
+/* pero ya tenemos GMaps */
+
+#gmaps img{
+		float: right;
+		@include transform(0,0,1,1,5deg,0,0);
+}
+
+
+#hot{
+	 h2{font-size:45px;}
+	 img{height:230px;}
+}
+
+#colofon img{
+			float:right;
+			width: 100px;
+}
+#colofon.active img{
+	@include transform(0,0,2.5,2.5,-10deg,0,0);
+	@include transition-duration(1s);
+	@include transition-delay(1s);
+	}
+
+#refs{
+	li{font-size:32px;}
+	#ccby{height:100px;}
+}
+
+
+
+
 /*renders*/
 
 #render3 a, #render4 a, #datos7 p a{
@@ -116,41 +162,21 @@ img {z-index:1000;}
 }
 
 #render3 img:hover, #render4 img:hover{
-		z-index: 100;
-		-webkit-transition: all 1s ease;
-		-moz-transition:    all 1s ease;	 
-		-ms-transition:     all 1s ease;	 
-		-o-transition:      all 1s ease;	 
-		transition:         all 1s ease;	 
+	z-index: 100;
+	@include transition(all 1s ease); 
 }
 
 #render3 img[src*="standard"]:hover,#render4 img[src*="freeline"]:hover{
-		-webkit-transform: scale(2.1) translateX(80px) translateY(68px);
-		-moz-transform:    scale(2.1) translateX(80px) translateY(68px);
-		-ms-transform:     scale(2.1) translateX(80px) translateY(68px);
-		-o-transform:      scale(2.1) translateX(80px) translateY(68px);
-		transform:         scale(2.1) translateX(80px) translateY(68px);
+	@include transform(0,0,2.1,2.1,0,80px,68px);
 }
 #render3 img[src*="cycle"]:hover,#render4 img[src*="midnight"]:hover{
-		-webkit-transform: scale(2.1) translateX(-80px) translateY(68px);
-		-moz-transform:    scale(2.1) translateX(-80px) translateY(68px);
-		-ms-transform:     scale(2.1) translateX(-80px) translateY(68px);
-		-o-transform:      scale(2.1) translateX(-80px) translateY(68px);
-		transform:         scale(2.1) translateX(-80px) translateY(68px);
+	@include transform(0,0,2.1,2.1,0,-80px,68px);
 }
 #render3 img[src*="transport"]:hover,#render4 img[src*="pale"]:hover{
-		-webkit-transform: scale(2.1) translateX(80px) translateY(-68px);
-		-moz-transform:    scale(2.1) translateX(80px) translateY(-68px);
-		-ms-transform:     scale(2.1) translateX(80px) translateY(-68px);
-		-o-transform:      scale(2.1) translateX(80px) translateY(-68px);
-		transform:         scale(2.1) translateX(80px) translateY(-68px);
+	@include transform(0,0,2.1,2.1,0,80px,-68px);
 }
 #render3 img[src*="mapquest"]:hover,#render4 img[src*="city"]:hover{
-		-webkit-transform: scale(2.1) translateX(-80px) translateY(-68px);
-		-moz-transform:    scale(2.1) translateX(-80px) translateY(-68px);
-		-ms-transform:     scale(2.1) translateX(-80px) translateY(-68px);
-		-o-transform:      scale(2.1) translateX(-80px) translateY(-68px);
-		transform:         scale(2.1) translateX(-80px) translateY(-68px);
+	@include transform(0,0,2.1,2.1,0,-80px,-68px);
 }
 
 /* api */
@@ -167,29 +193,16 @@ img {z-index:1000;}
 #josm img{
 			float:right;
 			width: 60px;
-			margin-top: 150px;
-			margin-right: 50px;
+			margin-bottom: 10px;
+			margin-right: 30px;
 }
 #josm.active img{
-
-	-webkit-transform: scale(3);
-	-moz-transform:    scale(3);
-	-ms-transform:     scale(3);
-	-o-transform:      scale(3);
-	transform:         scale(3);
-	
-	-webkit-transition-duration: 2.0s;
-	-moz-transition-duration:    2.0s;
-	-ms-transition-duration:     2.0s;
-	-o-transition-duration:      2.0s;
-	transition-duration:         2.0s;
-	
-	-webkit-transition-delay: 2.0s;
-	-moz-transition-delay:    2.0s;
-	-ms-transition-delay:     2.0s;
-	-o-transition-delay:      2.0s;
-	transition-delay:         2.0s;
+	@include transform(0,0,3,3,0,-80px,10px);
+	@include transition-duration(2s);
+	@include transition-delay(2s);
 }
+
+
 
 
 
@@ -198,14 +211,32 @@ img {z-index:1000;}
  en el overview, luego puedo quitarlo
  y solo saldrán las diapos con clase "section"
  */
+
+
+#overview img{
+	display:none;
+}
+ 
 .impress-on-overview{ 
 	/* ocultar todo por defecto */
 	.step {
-    opacity: 0.6;
+    opacity: 0;
     cursor: pointer;
 	}
+	
+   #overview img {
+   	display:block;
+   	opacity:1;
+   	width:300px;
+   	position:absolute;
+   	bottom: 15px;
+   	left:auto;
+   	right:45px;
+   }
+   
+   #title{opacity: 1 !important;}
 }
 
 #overview.active p{
-	margin: 420px 0 0 250px;
+	margin: 420px 0 0 50px;
 }
