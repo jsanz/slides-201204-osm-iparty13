@@ -16,6 +16,22 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+    
+    <style type="text/css">
+      .container, .row,{width:720px;}
+      h1 {
+      font-size: 60px;
+      line-height: 60px;
+      margin:10px 0;
+      }
+      .span12{margin-top:25px;}
+      .span12 p{font-size:20px;line-height:20px;}
+      .span6{width:360px;}
+      .parte1 ul, .parte2 ul{
+        padding-left:25px;
+      }
+    </style>
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="http://jorgesanz.net/js/bootstrap/ico/favicon.ico">
@@ -29,7 +45,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="hero-unit span12">
+        <div class="span12">
           <img src="imgs/osm-logo.png" style="float:right;width:250px;margin-left:25px;"/>
           <h1>Introducción a Open Street Map</h1>
       
@@ -39,11 +55,17 @@
             <a href="http://jorgesanz.net">Jorge Sanz</a> · 
             <a href="http://twitter.com/xurxosanz" target="_blank" title="Jorge en twitter">@xurxosanz</a>
           </p>
+        <p>
+          <a target="_blank" title="url de las charlas"
+           href="http://bit.ly/iparty13-osm ">http://bit.ly/iparty13-osm </a> · 
+          <a target="_blank" title="repo del código de las charlas"
+           href="https://github.com/jsanz/slides-201204-osm-iparty13/tree/gh-pages">github</a>
+        </p>
         </div>
       </div>
       <div class="row">
         
-        <div class="span6">
+        <div class="span6 parte1">
           <h2>Primera parte</h2>
           <ul>
             <li>¿Qué es OSM?</li>
@@ -56,7 +78,7 @@
                 Acceder
               </a>
         </div>
-        <div class="span6">
+        <div class="span6  parte2">
           <h2>Segunda parte</h2>
           <ul>
             <li>Flujo de trabajo</li>

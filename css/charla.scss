@@ -130,16 +130,13 @@ img {z-index:1000;}
 #colofon.active img{
 	@include transform(0,0,2.5,2.5,-10deg,0,0);
 	@include transition-duration(1s);
-	@include transition-delay(1s);
+	@include transition-delay(4s);
 	}
 
 #refs{
 	li{font-size:32px;}
 	#ccby{height:100px;}
 }
-
-
-
 
 /*renders*/
 
